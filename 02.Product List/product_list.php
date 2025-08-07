@@ -1,7 +1,7 @@
 <?php
     include("config.php");
 
-    if(isset($_POST['name']) && isset($_POST['category']) && isset($_POST['brand']) && isset($_POST['price']) && isset($_POST['quantity']) && isset($_POST['description'])) {
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
         $name = $_POST['name'];
         $category = $_POST['category'];
         $brand = $_POST['brand'];
@@ -21,6 +21,9 @@
         }
 
     }
+
+    echo "<h2>All Products</h2>";
+
     $sql = "SELECT * FROM product";
     $result = mysqli_query($conn, $sql);
 
@@ -38,4 +41,6 @@
     }
     
     echo "<a href=\"product_form.php\"> Go Back </a>";
+
+    mysqli_close($conn);
 ?>
