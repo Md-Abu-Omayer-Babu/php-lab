@@ -31,39 +31,39 @@
         } else {
             echo "Error inserting data: " . mysqli_error($conn) . "<br><br>";
         }
-
-        $sql = "SELECT * FROM student";
-        $result = mysqli_query($conn, $sql);
-
-        if(mysqli_num_rows($result) > 0){
-            while($row = mysqli_fetch_assoc($result)){
-                echo "Name: ". $row['name']. "<br>";
-                echo "Roll: " . $row["roll"] . "<br>";
-                echo "Email: " . $row["email"] . "<br>";
-                echo "Phone: " . $row["phone"] . "<br>";
-                echo "DOB: " . $row["dob"] . "<br>";
-                echo "Department: " . $row["department"] . "<br>";
-                echo "Gender: " . $row["gender"] . "<br>";
-                echo "Address: " . $row["address"] . "<br>";
-
-                echo "<br><br><br><br><br>";
-            }
-        }
-        else {
-            echo "No records <br>";
-        }
-
-        echo "<h2>Submitted Data:</h2>";
-        echo "Name: " . htmlspecialchars($name) . "<br>";
-        echo "Roll: " . htmlspecialchars($roll) . "<br>";
-        echo "Email: " . htmlspecialchars($email) . "<br>";
-        echo "Phone: " . htmlspecialchars($phone) . "<br>";
-        echo "DOB: " . htmlspecialchars($dob) . "<br>";
-        echo "Department: " . htmlspecialchars($department) . "<br>";
-        echo "Gender: " . htmlspecialchars($gender) . "<br>";
-        echo "Address: " . htmlspecialchars($address) . "<br>";
-        
     }
+    
+    $sql = "SELECT * FROM student";
+    $result = mysqli_query($conn, $sql);
+
+    if(mysqli_num_rows($result) > 0){
+        while($row = mysqli_fetch_assoc($result)){
+            echo "Name: ". $row['name']. "<br>";
+            echo "Roll: " . $row["roll"] . "<br>";
+            echo "Email: " . $row["email"] . "<br>";
+            echo "Phone: " . $row["phone"] . "<br>";
+            echo "DOB: " . $row["dob"] . "<br>";
+            echo "Department: " . $row["department"] . "<br>";
+            echo "Gender: " . $row["gender"] . "<br>";
+            echo "Address: " . $row["address"] . "<br>";
+
+            echo "<br><br><br><br><br>";
+        }
+    }
+    else {
+        echo "No records <br>";
+    }
+
+    echo "<h2>Submitted Data:</h2>";
+    echo "Name: " . htmlspecialchars($name) . "<br>";
+    echo "Roll: " . htmlspecialchars($roll) . "<br>";
+    echo "Email: " . htmlspecialchars($email) . "<br>";
+    echo "Phone: " . htmlspecialchars($phone) . "<br>";
+    echo "DOB: " . htmlspecialchars($dob) . "<br>";
+    echo "Department: " . htmlspecialchars($department) . "<br>";
+    echo "Gender: " . htmlspecialchars($gender) . "<br>";
+    echo "Address: " . htmlspecialchars($address) . "<br>";
+
 
     mysqli_close($conn);
     echo "<a href='student_form.php'>Go Back</a>";
