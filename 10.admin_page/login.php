@@ -39,5 +39,6 @@
         Password: <input type="password" name="password" required><br><br>
         <button type="submit">Login</button>
     </form>
+    <p>Don't have an account? <a href="register.php">Register here</a>.</p>
 </body>
 </html>
