@@ -11,14 +11,14 @@
     }
 
     echo "<h2>Submitted Data:</h2>";
-    echo "Name: " . htmlspecialchars($name) . "<br>";
-    echo "Roll: " . htmlspecialchars($roll) . "<br>";
-    echo "Email: " . htmlspecialchars($email) . "<br>";
-    echo "Phone: " . htmlspecialchars($phone) . "<br>";
-    echo "DOB: " . htmlspecialchars($dob) . "<br>";
-    echo "Department: " . htmlspecialchars($department) . "<br>";
-    echo "Gender: " . htmlspecialchars($gender) . "<br>";
-    echo "Address: " . htmlspecialchars($address) . "<br>";
+    echo "Name: " . $name . "<br>";
+    echo "Roll: " . $roll . "<br>";
+    echo "Email: " . $email . "<br>";
+    echo "Phone: " . $phone . "<br>";
+    echo "DOB: " . $dob . "<br>";
+    echo "Department: " . $department . "<br>";
+    echo "Gender: " . $gender . "<br>";
+    echo "Address: " . $address . "<br>";
 
     echo "<a href='student_form.php'>Go Back</a>";
 ?>
