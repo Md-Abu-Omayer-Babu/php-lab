@@ -15,34 +15,20 @@
 
     if (mysqli_num_rows($result) > 0) {
         echo "<h2>Student Profiles</h2>";
-        echo "<table border='1' cellpadding='8'>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Roll</th>
-                    <th>Reg</th>
-                    <th>Department</th>
-                    <th>Session</th>
-                    <th>Email</th>
-                    <th>Gender</th>
-                    <th>Date of Birth</th>
-                </tr>";
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo "<tr>
-                    <td>{$row['id']}</td>
-                    <td>{$row['name']}</td>
-                    <td>{$row['roll']}</td>
-                    <td>{$row['reg']}</td>
-                    <td>{$row['dept']}</td>
-                    <td>{$row['session']}</td>
-                    <td>{$row['email']}</td>
-                    <td>{$row['gender']}</td>
-                    <td>{$row['dob']}</td>
-                </tr>";
+        while($row = mysqli_fetch_assoc($result)){
+            echo "ID: " . $row['id'] . "<br>";
+            echo "Name: " . $row['name'] . "<br>";
+            echo "Roll: " . $row['roll'] . "<br>";
+            echo "Reg: " . $row['reg'] . "<br>";
+            echo "Department: " . $row['dept'] . "<br>";
+            echo "Session: " . $row['session'] . "<br>";
+            echo "Email: " . $row['email'] . "<br>";
+            echo "Gender: " . $row['gender'] . "<br>";
+            echo "Date of Birth: " . $row['dob'] . "<br>";
+            
+            echo "<hr>"; // divider line (horizontal line) ---> optional
         }
-        echo "</table>";
-    } else {
-        echo "No student profiles found.";
+    
     }
 
     mysqli_close($conn);
