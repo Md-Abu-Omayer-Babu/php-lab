@@ -13,7 +13,5 @@
         Description: <textarea name = "description" required></textarea> <br><br>
         <input type = "submit" value = "Submit">
     </form>
-    <a href="product_list.php">Go To Product List Page</a>
-    <br><br>
 </body>
 </html>
