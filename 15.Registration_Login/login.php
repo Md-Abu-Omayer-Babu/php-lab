@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include("config.php");
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -11,7 +12,7 @@
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['username'] = $user['username'];
             header("Location: index.php");
-            // exit;
+            exit;
         } else {
             echo "<script>alert('Invalid username or password');</script>";
         }
