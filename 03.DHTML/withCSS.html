@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Separate Event Functions with Minimal CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button, input {
+            padding: 8px 16px;
+            font-size: 16px;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #2a7ae2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Separate Event Functions Demo</h2>
+
+<button onmouseover="hoverMessage()">Hover Over Me</button>
+<br><br>
+
+<button onclick="clickMessage()">Click Me</button>
+<br><br>
+
+<input type="text" placeholder="Type something..." onkeypress="keypressMessage()">
+
+<div id="message"></div>
+
+<script>
+function clickMessage() {
+    document.getElementById("message").innerHTML = "I am a CSE student (by click)";
+}
+
+function hoverMessage() {
+    document.getElementById("message").innerHTML = "I am a CSE student (by mouseover)";
+}
+
+function keypressMessage() {
+    document.getElementById("message").innerHTML = "I am a CSE student (by keypress)";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Separate Event Functions</title>
+</head>
+<body>
+
+<h2>Separate Event Functions Demo</h2>
+
+<button onmouseover="hoverMessage()">Hover Over Me</button>
+<br><br>
+
+<button onclick="clickMessage()">Click Me</button>
+<br><br>
+
+<input type="text" placeholder="Type something..." onkeypress="keypressMessage()">
+
+<div id="message"></div>
+
+<script>
+function clickMessage() {
+    document.getElementById("message").innerHTML = "I am a CSE student (by click)";
+}
+
+function hoverMessage() {
+    document.getElementById("message").innerHTML = "I am a CSE student (by mouseover)";
+}
+
+function keypressMessage() {
+    document.getElementById("message").innerHTML = "I am a CSE student (by keypress)";
+}
+</script>
+
+</body>
+</html>
