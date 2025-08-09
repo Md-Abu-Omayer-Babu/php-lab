@@ -36,8 +36,8 @@
         $result = mysqli_query($conn, $sql);
 
         while ($row = mysqli_fetch_assoc($result)) {
-            echo "<div style='text-align:center; border:1px solid #ccc; padding:10px;'>
-                    <img src='{$row['image_path']}' width='200' style='display:block; margin:auto;'>
+            echo "<div>
+                    <img src='{$row['image_path']}' width='200'>
                     <p>{$row['title']}</p>
                 </div>";
         }
