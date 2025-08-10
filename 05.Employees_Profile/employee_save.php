@@ -12,7 +12,7 @@
         $address = $_POST['address'];
 
         $sql = "INSERT INTO employee (fullname, email, phone, dept, position, salary, hire_date, address)
-                VALUES($fullname, $email, $phone, $dept, $position, $salary, $hire_date, $address)";
+                VALUES('$fullname', '$email', '$phone', '$dept', '$position', $salary, '$hire_date', '$address')";
         
         if(mysqli_query($conn, $sql)){
             echo "Insertion successfull!";
